@@ -9,7 +9,7 @@ class MenuSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Container(
+      child: SizedBox(
         width: double.infinity,
         height: 260,
         child: Column(
@@ -48,7 +48,7 @@ class _FoodImage extends StatelessWidget {
           children: [
             
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, 'details', arguments: 'movie-instance'),
+              onTap: () => Navigator.pushNamed(context, 'details', arguments: 'food-instance'),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: const FadeInImage(
@@ -64,7 +64,7 @@ class _FoodImage extends StatelessWidget {
             const SizedBox(height: 5),
              
             const Text(
-              'Starwars: El retorno del nuevo Jedi Silvestre de Monte cristo',
+              'Food description',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,

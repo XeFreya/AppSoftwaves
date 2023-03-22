@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soft_waves/screens/screens.dart';
+import 'package:soft_waves/theme/app_theme.dart';
 
 
 
@@ -14,11 +15,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Softwaves_app',
+      theme: AppTheme.lightTheme,
       initialRoute: 'home',
       routes: {
         'home':( _ ) =>  const HomeScreen(),
-        'details':( _ ) => const DetailsScreen()
+        'details':( _ ) => const DetailsScreen(),
+        'account':(context) => const AccountScreen()
       },
+      
     );
   }
 }
